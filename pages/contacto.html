@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=devide-width, initial-scale=1">
         <title>Formacion | Alejandro Riquelme</title>
         <link rel="stylesheet" href="../style/style.css">
+        <script src="https://kit.fontawesome.com/f8802ac787.js" crossorigin="anonymous"></script>
          <!--
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
@@ -32,16 +33,48 @@
         </header>
 
         <section class="contacto">
-            <div class="box">
-                <div class="boxImage">
-                    <img src="AboutMe.png">
-                </div>
-                <div class="boxText">
-                    <h1>Conóceme</h1>
-                </div>
+            <!--<h1>Contacto</h1>-->
+            <div class="contact-form">
+                <h2>Contacto</h2>
+                <form action="../php/send.php" method="post">
+                    <p>
+                        <input type="text" placeholder="Nombre" required name="nombre"> 
+                    </p>
+                    
+                    <p>
+                        <input type="email" placeholder="Email" required name="email">
+                    </p>
+                    
+                    <p class="oneline">
+                        <input  type="text" placeholder="Asunto " required name="asunto">
+                    </p>
+                    <p class="oneline">
+                        <textarea placeholder="Mensaje" rows="5" required name="mensaje"></textarea>
+                    </p>
+                    <p class="oneline">
+                        <button type="submit">Enviar</button>
+                    </p>
+
+                </form>
     
             </div>
+
+            <div class="contact-info">
+                <h2>Info</h2>
+                <ul>
+                    <li><i class="fas fa-map-marked-alt"></i> Ramón Giraldo 11, Vva de los Infantes</li>
+                    <li><i class="fas fa-envelope"></i> alejandroriquelme4@hotmail.com</li>
+                    <li><i class="fas fa-mobile-alt"></i> +34 618 916 708</li>
+                    <li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.415799817718!2d-3.0186043851602786!3d38.73121966432838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd68d12d3d899899%3A0xcc99a3a270520e06!2sC.%20Ram%C3%B3n%20Giraldo%2C%2011%2C%2013320%20Villanueva%20de%20los%20Infantes%2C%20Cdad.%20Real!5e0!3m2!1ses-419!2ses!4v1638965237054!5m2!1ses-419!2ses" width="100%" height="225" style="border:0;" allowfullscreen="" loading="lazy"></iframe></li>
+
+                </ul>   
+                 
+            </div>
         </section>
+
+        <footer>
+            <p class="textoFooter">Alejandro Riquelme &copy;</p>
+        </footer>
 
     </body>
 

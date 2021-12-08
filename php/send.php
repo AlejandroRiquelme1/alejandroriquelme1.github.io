@@ -6,5 +6,4 @@
     $mensaje = $_POST["mensaje"];
     $contenidoUnido = "Nombre: " . $nombre . "\nEmail: " . $email . "\nAsunto: " . $asunto . "\nMensaje: " . $mensaje;
     mail($destino, $asunto, $contenidoUnido);
-    header("Location:www.google.es");
 ?>

@@ -36,7 +36,7 @@
             <!--<h1>Contacto</h1>-->
             <div class="contact-form">
                 <h2>Contacto</h2>
-                <form action="../php/send.php" method="post">
+                <form id="formulario" action="">
                     <p>
                         <input type="text" placeholder="Nombre" required name="nombre"> 
                     </p>
@@ -72,9 +72,25 @@
             </div>
         </section>
 
+        <a href="mailto:alejandroriquelme4@hotmail.com" id="dirEmail"></a>
+
         <footer>
             <p class="textoFooter">Alejandro Riquelme &copy;</p>
         </footer>
+
+        <script>
+            const $form = document.querySelector('#formulario')
+            const $buttonMailto = document.querySelector('#dirEmail')
+
+            $form.addEventListener('submit', sendEmail)
+
+            function sendEmail(event) {
+                event.preventDefault()
+                const form = new FormData(this)
+                $buttonMailto.setAttribute('href', `mailto:alejandroriquelme4@hotmail.com?subject=${form.get('nombre')}  a través de correo ${form.get('email')} con asunto ${form.get('asunto')}&body=${form.get('mensaje')}`)
+                $buttonMailto.click()
+            }
+        </script>
 
     </body>
 

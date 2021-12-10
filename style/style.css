@@ -254,9 +254,106 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /*centrado para minimizar*/
+    align-items: center;
     padding: 10px 25px 50px 25px; /*para que nav y texto no queden pegados*/
     
 }
+
+.formacion h2{
+    width: 70%;
+    
+}
+
+/*BOX*/
+.boxFormacion{
+    position: relative;
+    width: 70%;
+    height: 150px;
+    display: flex ;
+    flex-wrap: wrap;
+    transition: 0.5s;
+    margin: 20px 10px; /*esta separacion entre boxes*/
+    background-image: linear-gradient(rgba(16, 50, 91, 0.897), rgba(255, 255, 255, 0.35)), url(../images/fondo.jpg);   
+    box-shadow: 0 0 20px 0 rgba(255,255,255,0.6);
+    
+    
+}
+
+.boxFormacion:hover{
+    -webkit-transform:scale(1.1);transform:scale(1.1);
+}
+/*BOX IMAGE*/
+.boxFormacion .boxFormacionImage{
+    position: absolute;
+    width: 200px;
+    height: 100%;
+
+
+    
+    
+}
+.boxFormacion .boxFormacionImage img{
+    max-height: 140px;
+    opacity: 1;
+    padding-top: 15px;
+    padding-left: 70px;
+    padding-bottom: 10px;
+
+}
+
+/*texto box*/
+.boxFormacion .boxFormacionText{
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    left: 30%;
+    display: inline;
+}
+
+.boxFormacion .boxFormacionText h3{
+    padding-top: 8%;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+
+.boxFormacion .boxFormacionText p{
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+
+@media (max-width:935px){
+    .boxFormacion .boxFormacionText h3{
+        padding-top: 8%;
+        padding-left: 80px;
+        padding-right: 20px;
+    }
+    
+    .boxFormacion .boxFormacionText p{
+        padding-top: 5px;
+        padding-left: 80px;
+        padding-right: 20px;
+    
+    }
+
+}
+
+@media (max-width:577px){
+    .boxFormacion .boxFormacionText {
+        display: none;
+    }
+    
+    .boxFormacion .boxFormacionImage img{
+        padding-left: 100px;
+        
+    
+    }
+
+}
+
 /*-----------------------------------------------------FORMACION HTML---------------------------------------------------*/
 
 
@@ -411,6 +508,10 @@ footer{
 .contact-info ul li iframe{
     filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.7));
     clip-path: polygon(6% 0, 94% 0, 100% 6%, 100% 70%, 100% 100%, 0 100%, 0% 70%, 0 6%);
+}
+
+#dirEmail´{
+    opacity: 0;
 }
 /*-----------------------------------------------------CONTACTO HTML---------------------------------------------------*/
 

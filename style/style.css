@@ -157,8 +157,9 @@ footer{
     margin:20px;
     transition: 0.5s;
     margin: 30px 20px; /*esta separacion entre boxes*/
-    background: linear-gradient(rgb(0,0,0), rgba(12, 121, 211, 0.582), rgba(87, 83, 83, 0.178));
-    
+    background: linear-gradient(rgb(14, 59, 206), rgb(0, 174, 255));    
+    /*background: linear-gradient(rgb(0,0,0), rgba(12, 121, 211, 0.582), rgba(87, 83, 83, 0.178));*/
+
 }
 /*BOX IMAGE*/
 .box .boxImage{
@@ -173,12 +174,17 @@ footer{
 }
 .box .boxImage img{
     max-width: 100%;
+    opacity: 1;
+    /*OPACIDAD 0.1 PARA PONERLO AL PRINCIPIO MAS OSCURO
     opacity: 0.1;
+    */
     transition: 0.5s;
 }
 /*ANIMACION RECUADRO*/
 .box:hover{
     height: 270px;
+    -webkit-transform:scale(1.1);transform:scale(1.1);
+
 }
 .box:hover .boxImage img{
     opacity: 1;
@@ -190,7 +196,7 @@ footer{
     bottom: -2px;
     left:-2px;
     right:-2px;
-    background: #fff ;
+    background: linear-gradient(rgb(14, 59, 206), rgb(0, 174, 255));    
     z-index: -1;
 }
 .box::after{
@@ -200,14 +206,16 @@ footer{
     bottom: -2px;
     left:-2px;
     right:-2px;
-    background: #fff ;
+    background: rgb(13, 104, 240) ;
     z-index: -2;
-    filter:blur(35px);
+    filter:blur(5px);
 }
+/*
 .box::before, .box::after{
     background: linear-gradient(135deg, #0046dca9, #15cbd1c5, #173d8a);
-}
 
+}
+*/
 /*texto box*/
 .box .boxText{
     position: absolute;
@@ -399,7 +407,7 @@ footer{
 
 
 
-/*-----------------------------------------------------FORMACION HTML---------------------------------------------------*/
+/*-----------------------------------------------------PORTFOLIO HTML---------------------------------------------------*/
 
 .portfolio{
     /*
@@ -422,9 +430,15 @@ footer{
     margin: 10px; /*separar boxes al minimizar*/
 
     filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.7));
-    border-radius: 20px 20px 0 0; /*redondea bordes*/
+    border-radius: 20px 20px 20px 20px; /*redondea bordes*/
+    width: 235px;
 
 } 
+
+.boxPortfolio:hover{
+    -webkit-transform:scale(1.1);transform:scale(1.1);
+    background-color: rgb(3, 12, 94);
+}
 
 @media (max-width:560px){
     .boxPortfolio{
@@ -433,15 +447,35 @@ footer{
 
 }
 
+.boxPortfolio .boxPortfolioImage{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 .boxPortfolio .boxPortfolioImage img{
-    position: relative;
+    position: absolute;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    background-image: linear-gradient(rgb(14, 59, 206), rgb(0, 174, 255));    
+    background: linear-gradient(rgb(14, 59, 206), rgb(0, 174, 255));    
 
     width: auto;
     height: auto;
-    max-width: 200px;
+    max-width: 240px;
+
     border-radius: 20px 20px 0 0; /*redondea bordes*/
+}
+
+.boxPortfolio .boxPortfolioImage #github, .boxPortfolio .boxPortfolioImage #web{
+    width: auto;
+    height: auto;
+    width: 35px;
+    clip-path: inset(0 0 0 0);
+    background: none;
+    border-radius: 0 0 0 0;
+    position: relative;
+    right: 12px;
+    top: 235px;
+    
 
 
 }
@@ -457,8 +491,9 @@ footer{
 .boxPortfolio .boxPortfolioText{
     width: auto;
     height: auto;
-    max-width: 200px;
+    max-width: 235px;
     padding: 20px 10px;
+    margin: 220px 0 0 0;
 }
 
 .boxPortfolio .boxPortfolioText h3{
@@ -473,11 +508,12 @@ footer{
     text-align: justify;
     padding: 10px 0px;
     line-height: 20px;
+    font-size: 12px;
 }
 
 
 
-/*-----------------------------------------------------FORMACION HTML---------------------------------------------------*/
+/*-----------------------------------------------------PORTFOLIO HTML---------------------------------------------------*/
 
 
 

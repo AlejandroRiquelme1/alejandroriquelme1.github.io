@@ -261,78 +261,107 @@ footer{
 .formacion{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /*centrado para minimizar*/
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /*justify-content: center; centrado para minimizar*/
     padding: 10px 25px 50px 25px; /*para que nav y texto no queden pegados*/
     
-}
+    
 
+}
+/*
 .formacion h2{
-    width: 70%;
+    width: 100%;
      
 }
-
+*/
 /*BOX*/
 .boxFormacion{
     position: relative;
-    width: 70%;
+    width: 800px;
     height: 150px;
+    min-width: 320px;
     display: flex ;
     flex-wrap: wrap;
     transition: 0.5s;
     margin: 20px 10px; /*esta separacion entre boxes*/
-    background-image: linear-gradient(rgba(16, 50, 91, 0.897), rgba(255, 255, 255, 0.35)), url(../images/fondo.jpg);   
-    box-shadow: 0 0 20px 0 rgba(255,255,255,0.6);
-    
+    background: rgb(16, 64, 219); 
+
+
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.7));
+    border-radius: 20px 20px 20px 20px; /*redondea bordes*/
     
 }
 
 .boxFormacion:hover{
     -webkit-transform:scale(1.1);transform:scale(1.1);
+    background-color: rgb(3, 12, 94);
 }
+
 /*BOX IMAGE*/
 .boxFormacion .boxFormacionImage{
-    position: absolute;
-    width: 200px;
-    height: 100%;
-
-
+   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     
     
 }
 .boxFormacion .boxFormacionImage img{
-    max-height: 140px;
-    opacity: 1;
-    padding-top: 15px;
-    padding-left: 70px;
-    padding-bottom: 10px;
+    position: absolute;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+    background: linear-gradient(rgb(14, 59, 206), rgb(0, 174, 255));    
+    width: auto;
+    height: auto;
+    max-width: 150px;
+    border-radius: 20px 0px 20px 20px; /*redondea bordes*/
 
 }
 
 /*texto box*/
 .boxFormacion .boxFormacionText{
+    /*
     position: absolute;
     width: 70%;
     height: 100%;
     left: 30%;
     display: inline;
+*/
+    
+    max-width: 1000px;
+    margin: 45px 0 0 160px;
+}
+
+@media(max-width:705px){
+    .boxFormacion .boxFormacionText{
+        margin: 30px 0 0 160px;
+    }
+
+}
+
+@media(max-width:493px){
+    .boxFormacion .boxFormacionText{
+        margin: 3px 0 0 160px;
+    }
+
+}
+.boxFormacion .boxFormacionText p{
+    
+    color: white;
+    padding-top: 3px;
+    text-align: justify;
+    padding-right: 5px;
+
 }
 
 .boxFormacion .boxFormacionText h3{
-    padding-top: 8%;
-    padding-left: 20px;
-    padding-right: 20px;
+    text-align: left;
     color: white;
+    padding-top: 3px;
 }
 
-.boxFormacion .boxFormacionText p{
-    padding-top: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-
-}
-
-
+/*
 @media (max-width:935px){
     .boxFormacion .boxFormacionText h3{
         padding-top: 8%;
@@ -361,7 +390,7 @@ footer{
     }
 
 }
-
+*/
 /*-----------------------------------------------------FORMACION HTML---------------------------------------------------*/
 
 
@@ -369,33 +398,67 @@ footer{
 
 
 /*-----------------------------------------------------CONOCEME HTML---------------------------------------------------*/
-.misDatos{
-    width: 30%;
-    height: 50%;
-    justify-content: center; /*separar logo y enlaces*/
-    color: white;
-    float: left;
-    margin-left: 100px;
-    margin-top: 1%;
+
+
+.sectionConoceme{
+    /*
+    flex-wrap: wrap;
+    display: inline-block; /*Unoo al lado de otro
     padding-bottom: 2%;
+    padding-left: 5%;
+    */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /*centrado para minimizar*/
+    padding: 30px 25px 50px 25px; /*para que nav y texto no queden pegados*/
+
+}
+
+.sectionConoceme > * {
+    padding: 1em;
+}
+
+.sectionConoceme .contact-info img{
+    width: 250px;
+    height: 300px;
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.7));
+    clip-path: polygon(6% 0, 94% 0, 100% 6%, 100% 70%, 100% 100%, 0 100%, 0% 70%, 0 6%);
+
+}
+
+.sectionConoceme .contact-form form p {
+    margin: 0;
+    padding: 1.5em;
+    
+}
+
+
+.misDatos{
+    width: 70%;
+    color: white;
+    left: 0;
+    
     -webkit-text-size-adjust: auto;
 }
 
-.sectionConoceme{
-    flex-wrap: wrap;
-    display: inline-block; /*Unoo al lado de otro*/
+
+.sectionConoceme .misDatos h3{
+    font-size: 28px;
+    padding-top: 2%;
     padding-bottom: 2%;
-    padding-left: 5%;
+    color: rgb(0, 174, 255);
 }
 
-.sectionConoceme span{
+.sectionConoceme .misDatos span{
     color: white;
     font-family: 'Times New Roman', Times, serif;
     padding-top: 2%;
     padding-bottom: 2%;
     padding-left: 9%;
     font-size: 17px;
+
 }
+
 
 .miImagen{
     width: 20%;
@@ -433,28 +496,24 @@ footer{
     padding: 40px;
         
 }
-
+/*
 .portfolio h2{
     width: 100%;
     text-align: center;
     margin-bottom: 10px;
 }
+*/
 
-.portfolio span{
-    width: 100%;
-    text-align: left;
-    margin-bottom: 10px;
-    margin-left: 50px;
-    color: white;
-}
 
 .boxPortfolio{
     background: rgb(16, 64, 219);
+    max-width: 235px;
+    width: auto;
+    height: auto;
     margin: 20px; /*separar boxes al minimizar*/
-
     filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.7));
     border-radius: 20px 20px 20px 20px; /*redondea bordes*/
-    width: 235px;
+    transition: 0.5s;
 
 } 
 
@@ -543,13 +602,13 @@ footer{
     justify-content: center; /*centrado para minimizar*/
     padding: 30px 25px 50px 25px; /*para que nav y texto no queden pegados*/
 }
-
+/*
 .contacto h2{
     text-align: center;
     color: white;
 
 }
-
+*/
 .contacto > * {
     padding: 1em;
 }
@@ -647,7 +706,7 @@ footer{
 
 }
 
-@media (max-width: 935px){
+@media (max-width: 1000px){
     .contact-info{
         width: auto;
         height: auto;
@@ -789,6 +848,8 @@ h2{
     color: white;
     font-family: 'Times New Roman', Times, serif;
     padding: 10px 10px 10px 10px;
-    color: rgb(12, 193, 248);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
 
 }

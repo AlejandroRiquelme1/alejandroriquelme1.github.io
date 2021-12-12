@@ -13,6 +13,8 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
          -->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
     </head>
 
     <body>
@@ -39,33 +41,30 @@
                 <h2>Conóceme</h2>
                 <form id="formulario" action="">
                     <p>
-                        <input readonly type="text" placeholder="Nombre" required name="nombre"> 
+                        <input id="nombre" readonly type="text" placeholder="Nombre" required name="nombre"> 
                     </p>
 
                     <p>
-                        <input readonly type="text" placeholder="Apellidos" required name="apellidos"> 
+                        <input readonly id="apellidos" type="text" placeholder="Apellidos" required name="apellidos"> 
                     </p>
 
                     <p>
-                        <input readonly type="text" placeholder="Localidad" required name="localidad"> 
+                        <input readonly id="localidad" type="text" placeholder="Localidad" required name="localidad"> 
                     </p>
 
                     <p>
-                        <input readonly type="text" placeholder="Fecha de Nacimiento" required name="fechadenacimiento"> 
+                        <input readonly id="nacimiento" type="text" placeholder="Fecha de Nacimiento" required name="fechadenacimiento"> 
+                    </p>
+                    
+                    <p class="oneline">
+                        <input readonly id="email" type="email" placeholder="Email" required name="email">
                     </p>
                     
                     <p>
-                        <input readonly type="email" placeholder="Email" required name="email">
+                        <input readonly id="telefono" type="tel" placeholder="Teléfono " required name="asunto">
                     </p>
                     
-                    <p>
-                        <input readonly type="tel" placeholder="Teléfono " required name="asunto">
-                    </p>
-                    
-                    
-
                 </form>
-    
             </div>
 
             <div class="contact-info">
@@ -76,12 +75,44 @@
                 </ul>   
                  
             </div>
-            </section>
+        </section>
         
 
         <footer>
             <p class="textoFooter">Alejandro Riquelme &copy;</p>
         </footer>
+
+        <script>
+            $(function(){
+                maquina("nombre","Alejandro",100,0);
+                setTimeout(function() {maquina("apellidos","Riquelme Castaño",100,0);;},2000);
+                setTimeout(function() {maquina("localidad","Villanueva de los Infantes",100,0);;},4000);
+                setTimeout(function() {maquina("nacimiento","15/07/2000",100,0);;},7000);
+                setTimeout(function() {maquina("email","alejandro.riquelme1@alu.uclm.es",100,0);;},8000);
+                setTimeout(function() {maquina("telefono","+34 618 916 708",100,0);;},12000);
+
+
+
+            });
+
+
+            function maquina(contenedor,texto,intervalo,n){
+                var i=0,
+                // Creamos el timer
+                timer = setInterval(function() {
+                    if ( i<texto.length ) {
+                        // Si NO hemos llegado al final del texto..
+                        // Vamos añadiendo letra por letra y la _ al final.
+                        $("#"+contenedor).attr('placeholder', texto.substr(0,i++) + "_");
+                    } else {
+                        // En caso contrario..
+                        // Salimos del Timer y quitamos la barra baja (_)
+                        clearInterval(timer);
+                        $("#"+contenedor).attr('placeholder', texto);                
+                    }
+                },intervalo);
+            };
+        </script>
     </body>
 
 </html>

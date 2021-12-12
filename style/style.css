@@ -422,7 +422,7 @@ footer{
     width: 250px;
     height: 300px;
     filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.7));
-    clip-path: polygon(6% 0, 94% 0, 100% 6%, 100% 70%, 100% 100%, 0 100%, 0% 70%, 0 6%);
+    border-radius: 20px 20px 20px 20px; /*redondea bordes*/
 
 }
 
@@ -433,48 +433,12 @@ footer{
 }
 
 
-.misDatos{
-    width: 70%;
-    color: white;
-    left: 0;
-    
-    -webkit-text-size-adjust: auto;
-}
 
 
-.sectionConoceme .misDatos h3{
-    font-size: 28px;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    color: rgb(0, 174, 255);
-}
-
-.sectionConoceme .misDatos span{
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 9%;
-    font-size: 17px;
-
-}
 
 
-.miImagen{
-    width: 20%;
-    margin-top: 2%;
-    clip-path: polygon(100% 0%, 100% 44%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
-    border-color: cornflowerblue;
-    padding-bottom: 12px;
-    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.7));
-    
-}
 
-.flecha{
-    width: 12.2%;
-    margin-left: 200px;
-    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.7));
-}
+
 /*-----------------------------------------------------CONOCEME HTML---------------------------------------------------*/
 
 

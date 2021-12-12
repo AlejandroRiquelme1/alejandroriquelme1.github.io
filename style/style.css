@@ -154,7 +154,6 @@ footer{
     height: 225px;
     display: flex;
     justify-content: center;
-    margin:20px;
     transition: 0.5s;
     margin: 30px 20px; /*esta separacion entre boxes*/
     background: linear-gradient(rgb(14, 59, 206), rgb(0, 174, 255));    
@@ -173,12 +172,12 @@ footer{
     
 }
 .box .boxImage img{
-    max-width: 100%;
     opacity: 1;
     /*OPACIDAD 0.1 PARA PONERLO AL PRINCIPIO MAS OSCURO
     opacity: 0.1;
     */
     transition: 0.5s;
+    max-width: 100%;
 }
 /*ANIMACION RECUADRO*/
 .box:hover{
@@ -188,6 +187,7 @@ footer{
 }
 .box:hover .boxImage img{
     opacity: 1;
+    
 }
 .box::before{
     content: '';
@@ -388,6 +388,15 @@ footer{
     padding-left: 5%;
 }
 
+.sectionConoceme span{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 9%;
+    font-size: 17px;
+}
+
 .miImagen{
     width: 20%;
     margin-top: 2%;
@@ -425,9 +434,23 @@ footer{
         
 }
 
+.portfolio h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.portfolio span{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    color: white;
+}
+
 .boxPortfolio{
     background: rgb(16, 64, 219);
-    margin: 10px; /*separar boxes al minimizar*/
+    margin: 20px; /*separar boxes al minimizar*/
 
     filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.7));
     border-radius: 20px 20px 20px 20px; /*redondea bordes*/
@@ -440,12 +463,6 @@ footer{
     background-color: rgb(3, 12, 94);
 }
 
-@media (max-width:560px){
-    .boxPortfolio{
-        margin: 10px; /*separar boxes al minimizar*/
-    }
-
-}
 
 .boxPortfolio .boxPortfolioImage{
     display: flex;
@@ -463,6 +480,8 @@ footer{
     max-width: 240px;
 
     border-radius: 20px 20px 0 0; /*redondea bordes*/
+    right: 0;
+
 }
 
 .boxPortfolio .boxPortfolioImage #github, .boxPortfolio .boxPortfolioImage #web{
@@ -570,13 +589,15 @@ footer{
     background: none; /*quita fondo*/
     outline: 0;
     color: #fff;
-    border-bottom: 1px solid #088fb8; /*poner linea roja*/
+    border-bottom: 1px solid rgb(0, 174, 255);  
+  
+    ; /*poner linea roja*/
     font-family: Arial, Helvetica, sans-serif;
 
 }
 
 .contact-form form button{
-    background: #088fb8;
+    background: rgb(0, 174, 255);    
     border: 0;
     padding: 1em;
 }
@@ -615,7 +636,7 @@ footer{
 }
 
 .contact-info{
-    background: #088fb8;
+    background: rgb(0, 174, 255);    
     box-shadow: 0 0 20px 0 rgba(255,255,255,0.6);
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
@@ -764,17 +785,3 @@ h2{
     color: rgb(12, 193, 248);
 
 }
-
-span{
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 9%;
-    font-size: 17px;
-
-}
-
-
-
-

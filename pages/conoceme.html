@@ -24,6 +24,7 @@
             <nav class="navbar">
                 <a href="../index.html"><img src="../images/LogoMini.png" class="logo" alt="Logo"> </a>
                 <ul>
+                    <li id="home"><a href="../index.html"> Inicio </a></li>
                     <li><a href=conoceme.html> Conóceme </a></li>
                     <li><a href=formacion.html> Formación</a></li>
                     <li><a href=habilidades.html> Habilidades </a></li>
@@ -83,12 +84,12 @@
         </footer>
 
         <script>
-            
-            $(window).load(function(){
+           
+           $(window).load(function(){
                 prueba();
-            });
-            
-            $(function(){
+           });
+
+            $(function prueba(){
                 maquina("nombre","Alejandro",100,0);
                 setTimeout(function() {maquina("apellidos","Riquelme Castaño",100,0);;},2000);
                 setTimeout(function() {maquina("localidad","Villanueva de los Infantes",100,0);;},4000);
@@ -99,6 +100,8 @@
 
 
             });
+
+
 
 
             function maquina(contenedor,texto,intervalo,n){

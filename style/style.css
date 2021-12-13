@@ -66,6 +66,7 @@ header label img{
     margin: 0 20px; /*separacion entre enlaces*/  
     position: relative;
 }
+
 /*ENLACES DE NAVBAR*/
 .navbar ul li a{
     text-decoration: none; /*quita apariencia enlace*/
@@ -614,15 +615,16 @@ footer{
     background: none; /*quita fondo*/
     outline: 0;
     color: #fff;
-    border-bottom: 1px solid rgb(0, 174, 255);  
+    border-bottom: 1px solid rgb(16, 64, 219);
+    
   
-    ; /*poner linea roja*/
+    /*poner linea roja*/
     font-family: Arial, Helvetica, sans-serif;
 
 }
 
 .contact-form form button{
-    background: rgb(0, 174, 255);    
+    background: rgb(16, 64, 219);    
     border: 0;
     padding: 1em;
 }
@@ -661,7 +663,7 @@ footer{
 }
 
 .contact-info{
-    background: rgb(0, 174, 255);    
+    background: rgb(16, 64, 219);
     box-shadow: 0 0 20px 0 rgba(255,255,255,0.6);
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
@@ -699,10 +701,14 @@ footer{
 
 
 
-@media (max-width:735px){
+@media (max-width:813px){
 
     header label{
         display: block;
+    }
+
+    header{
+        height: 8vh;
     }
 
     .logo{
@@ -769,6 +775,7 @@ footer{
     }
 
     
+   
 
     input#botonMenu:checked ~ .navbar {
         display: flex;

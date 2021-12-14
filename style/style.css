@@ -442,6 +442,63 @@ footer{
 
 /*-----------------------------------------------------CONOCEME HTML---------------------------------------------------*/
 
+/*-----------------------------------------------------HABILIDADES HTML---------------------------------------------------*/
+
+#lenguajes:checked ~ #imagenes .bbdd, #lenguajes:checked ~ #imagenes .web, #lenguajes:checked ~ #imagenes .otros{
+    display: none;
+}
+
+#bbdd:checked ~ #imagenes .lenguajes, #bbdd:checked ~ #imagenes .web, #bbdd:checked ~ #imagenes .otros{
+    display: none;
+}
+
+#web:checked ~ #imagenes .bbdd, #web:checked ~ #imagenes .lenguajes, #web:checked ~ #imagenes .otros{
+    display: none;
+}
+
+#otros:checked ~ #imagenes .bbdd, #otros:checked ~ #imagenes .web, #otros:checked ~ #imagenes .lenguajes{
+    display: none;
+}
+
+.habilidadesduras input{
+    display: none;
+}
+
+.habilidadesduras label{
+    color: white;
+    border-right: 1px solid white;
+    padding-left: 10px;
+    padding-right: 5px;
+
+
+}
+
+.habilidadesduras{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*centrado para minimizar*/
+    padding: 30px 25px 50px 25px; /*para que nav y texto no queden pegados*/
+}
+
+.habilidadesduras .navhabilidades{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /*centrado para minimizar*/
+    margin-bottom: 20px;
+
+}
+
+.habilidadesduras #imagenes{
+    display: flex;
+    flex-wrap: wrap;
+    background: blue;
+    padding: 30px 25px 50px 25px; /*para que nav y texto no queden pegados*/
+
+}
+
+/*-----------------------------------------------------HABILIDADES HTML---------------------------------------------------*/
+
 
 
 /*-----------------------------------------------------PORTFOLIO HTML---------------------------------------------------*/

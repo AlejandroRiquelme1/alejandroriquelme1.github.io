@@ -497,6 +497,40 @@ footer{
 
 }
 
+
+.boxHabilidades{
+    max-width: 200px;
+    max-height: 170px;
+    width: auto;
+    height: auto;
+    margin: 20px; /*separar boxes al minimizar*/
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.7));
+    border-radius: 20px 20px 20px 20px; /*redondea bordes*/
+    transition: 0.5s;
+    background: linear-gradient(rgb(14, 59, 206), rgb(0, 174, 255));    
+} 
+
+.boxHabilidades img{
+    max-width: 110px;
+    width: auto;
+    height: auto;
+}
+
+.boxHabilidades .boxHabilidadesImage{
+    justify-content: center; /*centrado para minimizar*/
+    display: flex;
+}
+
+.boxHabilidades .boxHabilidadesText{
+    justify-content: center; /*centrado para minimizar*/
+    display: flex;
+    background: white;
+    margin-top: 12px;
+    width: auto;
+    height: auto;
+    max-height: 200px;
+}
+
 /*-----------------------------------------------------HABILIDADES HTML---------------------------------------------------*/
 
 

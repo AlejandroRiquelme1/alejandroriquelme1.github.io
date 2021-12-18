@@ -420,8 +420,8 @@ footer{
 }
 
 .sectionConoceme .contact-info img{
-    width: 250px;
-    height: 300px;
+    width: 280px;
+    height: 380px;
     filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.7));
     border-radius: 20px 20px 20px 20px; /*redondea bordes*/
 
@@ -474,11 +474,10 @@ footer{
 }
 
 .habilidadesduras{
-    background-color: red;
     display: flex;
     flex-direction: column;
     justify-content: center; /*centrado para minimizar*/
-    padding: 30px 25px 50px 25px; /*para que nav y texto no queden pegados*/
+    padding: 30px 50px 50px 30px; /*para que nav y texto no queden pegados*/
 }
 
 .habilidadesduras .navhabilidades{
@@ -492,22 +491,24 @@ footer{
 .habilidadesduras #imagenes{
     display: flex;
     flex-wrap: wrap;
-    background: blue;
-    padding: 30px 25px 50px 25px; /*para que nav y texto no queden pegados*/
+    min-height: 290px;
+    justify-content: center;
+    align-content: center;
 
 }
 
 
 .boxHabilidades{
-    max-width: 200px;
-    max-height: 170px;
+    min-width: 120px;
+    max-width: 180px;
+    min-height: 170px;
     width: auto;
     height: auto;
     margin: 20px; /*separar boxes al minimizar*/
     filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.7));
     border-radius: 20px 20px 20px 20px; /*redondea bordes*/
     transition: 0.5s;
-    background: linear-gradient(rgb(14, 59, 206), rgb(0, 174, 255));    
+    background: linear-gradient(rgb(240, 240, 240), rgb(0, 174, 255));    
 } 
 
 .boxHabilidades img{
@@ -519,16 +520,23 @@ footer{
 .boxHabilidades .boxHabilidadesImage{
     justify-content: center; /*centrado para minimizar*/
     display: flex;
+    min-height: 110px;
+    align-items: center;
 }
 
 .boxHabilidades .boxHabilidadesText{
     justify-content: center; /*centrado para minimizar*/
     display: flex;
-    background: white;
-    margin-top: 12px;
     width: auto;
     height: auto;
-    max-height: 200px;
+    min-height: 40px;
+    align-items: center;
+    text-align: center;
+}
+
+.boxHabilidades .boxHabilidadesText h3{
+    color: white;
+
 }
 
 /*-----------------------------------------------------HABILIDADES HTML---------------------------------------------------*/

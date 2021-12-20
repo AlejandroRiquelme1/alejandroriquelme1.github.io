@@ -460,11 +460,11 @@ footer{
     display: none;
 }
 
-.habilidadesduras input{
+.habilidadesblandas input{
     display: none;
 }
 
-.habilidadesduras label{
+.habilidadesblandas label{
     color: white;
     border-right: 1px solid white;
     padding-left: 10px;
@@ -473,14 +473,14 @@ footer{
 
 }
 
-.habilidadesduras{
+.habilidadesblandas{
     display: flex;
     flex-direction: column;
     justify-content: center; /*centrado para minimizar*/
     padding: 30px 50px 50px 30px; /*para que nav y texto no queden pegados*/
 }
 
-.habilidadesduras .navhabilidades{
+.habilidadesblandas .navhabilidades{
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /*centrado para minimizar*/
@@ -488,13 +488,29 @@ footer{
 
 }
 
-.habilidadesduras #imagenes{
+.habilidadesblandas #imagenes, .habilidadesduras #imagenes{
     display: flex;
     flex-wrap: wrap;
     min-height: 290px;
     justify-content: center;
     align-content: center;
 
+}
+
+.habilidadesduras{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /*centrado para minimizar*/
+    padding: 0px 50px 10px 30px; /*para que nav y texto no queden pegados*/
+}
+
+.descripcionHabilidadesDuras{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /*centrado para minimizar*/
+    padding: 0px 50px 50px 30px; /*para que nav y texto no queden pegados*/
+    color: white;
+    text-align: justify;
 }
 
 

@@ -779,6 +779,11 @@ footer .fa-linkedin, footer .fa-github{
     margin-top: 20px;
 }
 
+.habilidadesblandas .navhabilidades label:hover{
+    color: rgb(0, 217, 255);
+    font-weight: bold;
+}
+
 /*-----------------------------------------------------HABILIDADES HTML---------------------------------------------------*/
 
 

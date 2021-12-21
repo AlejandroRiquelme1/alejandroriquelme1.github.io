@@ -301,7 +301,7 @@ footer .fa-linkedin, footer .fa-github{
     text-align: justify;
 }
 
-.miPresentacion strong{
+.miPresentacion p{
     color: white;
 }
 
@@ -530,6 +530,11 @@ footer .fa-linkedin, footer .fa-github{
         border-radius: 20px 20px 20px 20px; /*redondea bordes*/
 
     }
+
+    #esiGiraldo .boxFormacionImage img{ 
+        left:20px;
+        top:10px;
+    }
 }
 @media(max-width:493px){
     .boxFormacion .boxFormacionText{
@@ -725,6 +730,7 @@ footer .fa-linkedin, footer .fa-github{
     padding: 0px 50px 50px 30px; /*para que nav y texto no queden pegados*/
     color: white;
     text-align: justify;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 

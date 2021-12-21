@@ -363,7 +363,8 @@ footer .fa-linkedin, footer .fa-github{
     width: 800px;
     height: 150px;
     min-width: 320px;
-    display: flex ;
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     transition: 0.5s;
     margin: 20px 10px; /*esta separacion entre boxes*/
@@ -375,6 +376,37 @@ footer .fa-linkedin, footer .fa-github{
     
 }
 
+#esiGiraldo{
+    height: 220px;
+    margin:20px 0px;
+    padding:0;
+}
+
+#esiGiraldo .boxFormacionText {
+    max-width: 600px;
+    margin: 0;
+    padding-top:20px;
+}
+
+#esiGiraldo .boxFormacionImage img{
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+    left:10px;
+    top:30px;
+}
+
+#esiGiraldo .boxFormacionImage{
+    max-height: 100%;
+    background: white;    
+    width: 170px; 
+    height: 220px; 
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+    border-radius: 20px 0px 20px 20px; /*redondea bordes*/
+
+}
+
+
 .boxFormacion:hover{
     -webkit-transform:scale(1.1);transform:scale(1.1);
     background-color: rgb(3, 12, 94);
@@ -384,19 +416,18 @@ footer .fa-linkedin, footer .fa-github{
 .boxFormacion .boxFormacionImage{
    
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    
+    flex-direction: row;
+      
     
 }
 .boxFormacion .boxFormacionImage img{
     position: absolute;
     left: 0;
     clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
-    background: linear-gradient(rgb(14, 59, 206), rgb(0, 174, 255));    
     width: auto;
     height: auto;
     max-width: 150px;
+    min-height: max-content;
     border-radius: 20px 0px 20px 20px; /*redondea bordes*/
 
 }
@@ -415,25 +446,117 @@ footer .fa-linkedin, footer .fa-github{
     margin: 45px 0 0 160px;
 }
 
-@media(max-width:705px){
+@media(max-width:815px){
+    #esiGiraldo .boxFormacionText {
+        max-width: 500px;
+        margin: 0;
+        padding-top:20px;
+    }
+    #esiGiraldo{
+        height: 250px;
+        margin:20px 0px;
+        padding:0;
+    }
+    #esiGiraldo .boxFormacionImage{    
+        height: 250px; 
+    }
+}
+
+@media(max-width:720px){
     .boxFormacion .boxFormacionText{
         margin: 30px 0 0 160px;
+    }
+    #esiGiraldo .boxFormacionText {
+        max-width: 380px;
+        margin: 0;
+        padding-top:20px;
+    }
+    #esiGiraldo{
+        height: 320px;
+        margin:20px 0px;
+        padding:0;
+    }
+    #esiGiraldo .boxFormacionImage{    
+        height: 320px; 
     }
 
 }
 
+@media(max-width:615px){
+    #esiGiraldo .boxFormacionText {
+        max-width: 300px;
+        margin: 0;
+        padding-top:20px;
+    }
+    #esiGiraldo{
+        height: 350px;
+        margin:20px 0px;
+        padding:0;
+    }
+    #esiGiraldo .boxFormacionImage{    
+        height: 350px; 
+    }
+}
+
+@media(max-width:520px){
+    
+
+    body{
+        justify-content: center;
+        
+    }
+    #esiGiraldo{
+        position: relative;
+        min-height: 470px;
+        min-width: 330px;
+        display: flex;
+        flex-direction: row;
+    }
+    #esiGiraldo .boxFormacionText {
+        max-width: 600px;
+        margin: 0;
+        padding-top:10px;
+        padding-left: 30px;
+       
+    }
+    #esiGiraldo{
+        height: 150px;
+        margin:20px 0px;
+        padding:0;
+    }
+    #esiGiraldo .boxFormacionImage{    
+        height: 180px; 
+        width: 470px;
+        border-radius: 20px 20px 20px 20px; /*redondea bordes*/
+
+    }
+}
 @media(max-width:493px){
     .boxFormacion .boxFormacionText{
         margin: 3px 0 0 160px;
     }
 
 }
+
+@media(max-width:433px){
+    #esiGiraldo{
+        position: relative;
+        min-height: 530px;
+        min-width: 330px;
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+
+
 .boxFormacion .boxFormacionText p{
     
-    color: white;
+    color: rgb(226, 221, 221);
     padding-top: 3px;
     text-align: justify;
     padding-right: 5px;
+    margin-top:5px;
 
 }
 
@@ -441,6 +564,22 @@ footer .fa-linkedin, footer .fa-github{
     text-align: left;
     color: white;
     padding-top: 3px;
+    font-size: 20px;
+}
+
+
+.boxFormacion .boxFormacionText a{
+    text-align: left;
+    color: white;
+    padding-top: 3px;
+    font-size: 18px;
+}
+
+.boxFormacion .boxFormacionText span{
+    text-align: left;
+    color: white;
+    padding-top: 3px;
+    font-size: 12px;
 }
 
 /*
@@ -513,12 +652,6 @@ footer .fa-linkedin, footer .fa-github{
     padding: 1.5em;
     
 }
-
-
-
-
-
-
 
 
 /*-----------------------------------------------------CONOCEME HTML---------------------------------------------------*/
@@ -878,7 +1011,6 @@ footer .fa-linkedin, footer .fa-github{
         height: auto;
         width: 500px;
     }
-
     .contact-info ul{
         text-align: center;
     }
